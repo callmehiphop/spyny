@@ -1,0 +1,25 @@
+{
+  "name": "spyny",
+  "version": "0.0.0",
+  "description": "Tiny spy library",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test.js",
+    "lint": "jshint ./index.js ./test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/callmehiphop/spyny.git"
+  },
+  "keywords": [
+    "spy",
+    "spies",
+    "stub",
+    "sandbox",
+    "unit",
+    "test",
+    "tests"
+  ],
+  "author": "Dave Gramlich",
+  "license": "ISC"
+}
