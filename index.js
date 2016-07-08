@@ -92,8 +92,12 @@ module.exports.on = spyOn;
  * @return {object} sandbox - The sandbox.
  */
 function createSandbox() {
-  var spies = [];
   var sandbox = {};
+  var spies = sandbox.spies = [];
+
+  sandbox.flush = function() {
+    spies.length = 0;
+  };
 
   sandbox.reset = function() {
     spies.forEach(function(spy) {

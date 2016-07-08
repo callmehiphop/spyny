@@ -162,6 +162,17 @@ describe('spy', function() {
       assert.strictEqual(test.method1(), 'hi');
       assert.strictEqual(test.method2(), 'bye');
     });
+
+    it('should flush any cached spies', function() {
+      sandbox.spy();
+      sandbox.spy();
+
+      assert.strictEqual(sandbox.spies.length, 2);
+
+      sandbox.flush();
+
+      assert.strictEqual(sandbox.spies.length, 0);
+    });
   });
 
 });

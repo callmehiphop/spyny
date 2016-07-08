@@ -220,6 +220,24 @@ console.log(Dave.greet('Gabe'));
 // Hello, Gabe!
 ```
 
+#### `flush()`
+
+Clear all cached spies from the sandbox. *Note:* this does not restore/reset spies, this simply clears them all from the sandbox cache.
+
+```js
+var sandbox = require('spyny').sandbox();
+var spy = sandbox.spy;
+
+spy.on(Dave, 'greet', function() {
+  return 'hi';
+});
+
+sandbox.flush();
+sandbox.restore(); // `Dave.greet` is still a spy
+
+
+```
+
 ## License
 
 ISC
